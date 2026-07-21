@@ -1,0 +1,12 @@
+<p>{{percentuale()}}%</p>
+<div class="traccia">
+    <div class="riempimento" [style.width.%]="percentuale()" [class.completa]="percentuale() === 100"></div>
+</div>
+<button type="button" (click)="diminuisci()" [disabled]="percentuale() === 0">-10</button>
+@if (percentuale() === 100) {
+  <h2>Massimo</h2>
+} 
+<button type="button" (click)="aumenta()" [disabled]="percentuale() === 100">+10</button>
+@if (percentuale() === 0) {
+  <h2>Minimo</h2>
+} 

@@ -1,0 +1,22 @@
+<app-carta-prodotto 
+    [nome]="'Cuffie'" 
+    [prezzo]="80" 
+    [disponibile]="true"
+    (aggiungiAlCarrello)="onAggiungi($event)"
+    />
+
+
+<app-carta-prodotto 
+    [nome]="'Tastiera'" 
+    [prezzo]="120" 
+    [disponibile]="true"
+    (aggiungiAlCarrello)="onAggiungi($event)"
+/>
+<app-carta-prodotto
+    [nome]="'Mouse'"
+    [prezzo]="20"
+    [disponibile]="false"
+    (aggiungiAlCarrello)="onAggiungi($event)"
+/>
+
+<p>Carrello: {{ carrello.join(', ') }}</p>

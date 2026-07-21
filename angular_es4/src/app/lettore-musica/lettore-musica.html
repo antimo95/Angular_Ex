@@ -1,0 +1,7 @@
+<p class="stato" [class.attivo]="inRiproduzione">La musica è: {{inRiproduzione ? 'In riproduzione' : 'In Pausa'}}</p>
+<p class="volume">Il volume è impostato a: {{volume}}</p>
+<div class="controlli">
+  <button (click)="togglePlay()">Play/Pausa</button>
+  <button (click)="cambiaVolume(10)">+</button>
+  <button (click)="cambiaVolume(-10)">-</button>
+</div>

@@ -1,0 +1,10 @@
+<div class="carta">
+  <h3>{{ nome() }}</h3>
+  <p>{{ prezzo() }} €</p>
+  <p>{{ disponibile() ? 'Disponibile' : 'Esaurito' }}</p>
+</div>
+
+<div>
+  <button (click)="onAggiungi()" [disabled]="!disponibile()"> Aggiungi al carrello</button>
+</div>
+

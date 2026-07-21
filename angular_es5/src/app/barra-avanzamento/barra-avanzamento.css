@@ -1,0 +1,16 @@
+.traccia {
+  width: 300px;
+  height: 20px;
+  background: #eee;      /* grigio chiaro: il "vuoto" */
+  border: 1px solid #ccc;
+}
+
+.riempimento {
+  height: 100%;          /* alto quanto la traccia */
+  background: #1976d2;   /* blu: la parte piena */
+  width: 30%;            /* <-- questa percentuale sarà dinamica in Angular */
+}
+
+.riempimento.completa {
+  background-color: green;
+}

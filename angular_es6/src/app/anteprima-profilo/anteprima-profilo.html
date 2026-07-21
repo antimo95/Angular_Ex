@@ -1,0 +1,21 @@
+<label>
+  Nome:
+  <input type="text" [(ngModel)]="nome" placeholder="Il tuo nome" />
+</label>
+
+<label>
+  Età:
+  <input type="number" [(ngModel)]="eta" />
+</label>
+
+<label>
+  <input type="checkbox" [(ngModel)]="newsletter" />
+  Iscrivimi alla newsletter
+</label>
+
+
+
+<h3>Anteprima</h3>
+<p>Nome: {{ nome }}</p>
+<p>Età: {{ eta }}</p>
+<p>Iscritto alla newsletter: {{ newsletter ? 'Sì' : 'No' }}</p>
