@@ -18,7 +18,8 @@ Percorso pratico di apprendimento di **Angular 22**, un esercizio alla volta, co
 | 4 | Lettore musica | Event Binding | Eventi `(click)`, metodi parametrici, pattern clamp |
 | 5 | Barra di avanzamento | Property Binding | `[proprieta]`, style binding `[style.width.%]`, class binding `[class.x]` |
 | 6 | Anteprima profilo | Two-Way Binding | `[(ngModel)]`, "banana in a box", `FormsModule` |
-| 7–8 | Carta prodotto & catalogo | Input & Output | `input()` / `input.required()` (dati padre → figlio) e `output()` / `.emit()` / `$event` (eventi figlio → padre), componenti riutilizzabili |
+| 7 | Carta prodotto | Input | `input()` / `input.required()`, dati padre → figlio, componenti riutilizzabili |
+| 8 | Catalogo carrello | Output | `output()`, `.emit()`, eventi figlio → padre, `$event` |
 
 ## Concetti chiave della Fase 1
 
