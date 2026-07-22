@@ -1,0 +1,13 @@
+<section class="card">
+    <p class="Num_not">
+        Numero di notifiche:
+        <span class="badge" [class.badge--empty]="notifiche() === 0">{{notifiche()}}</span>
+    </p>
+
+    <div class="btn-group">
+        <button class="btn btn--primary" (click)="aggiungiNotifica()">Nuova notifica</button>
+        <button class="btn btn--secondary" (click)="leggiTutteNotifiche()" [disabled]="notifiche() === 0">Leggi tutte le notifiche</button>
+    </div>
+
+    <p class="nota">👀 Guarda il titolo della scheda del browser mentre premi i pulsanti.</p>
+</section>

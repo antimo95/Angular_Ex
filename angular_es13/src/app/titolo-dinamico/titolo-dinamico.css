@@ -1,0 +1,125 @@
+:host {
+    display: block;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    color: #1f2937;
+}
+
+.card {
+    max-width: 26rem;
+    margin: 2rem auto;
+    padding: 1.75rem 2rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.Num_not {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0 0 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.75rem;
+    height: 1.75rem;
+    padding: 0 0.4rem;
+    border-radius: 999px;
+    background: #4f46e5;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.badge--empty {
+    background: #9ca3af;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.btn {
+    padding: 0.6rem 1.1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:focus-visible {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+}
+
+.btn--primary {
+    background: #4f46e5;
+    color: #ffffff;
+}
+
+.btn--primary:hover {
+    background: #4338ca;
+}
+
+.btn--secondary {
+    background: #e5e7eb;
+    color: #1f2937;
+}
+
+.btn--secondary:hover:not(:disabled) {
+    background: #d1d5db;
+}
+
+.btn--secondary:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.nota {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+@media (prefers-color-scheme: dark) {
+    :host {
+        color: #e5e7eb;
+    }
+
+    .card {
+        background: #1f2937;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn--secondary {
+        background: #374151;
+        color: #e5e7eb;
+    }
+
+    .btn--secondary:hover:not(:disabled) {
+        background: #4b5563;
+    }
+
+    .nota {
+        color: #9ca3af;
+    }
+}

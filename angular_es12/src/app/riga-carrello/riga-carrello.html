@@ -1,0 +1,18 @@
+<div class="riepilogo">
+  <p>Prezzo unitario: {{ prezzoUnitario() }}</p>
+  <p>Quantità: {{ quantita() }}</p>
+  <p>Totale: {{ totale() }}</p>
+  <p>
+    @if (spedizioneGratuita()) {
+      <span class="spedizione-gratuita">✅ Spedizione gratuita</span>
+    } @else {
+      <span>Aggiungi ancora {{ mancanteSpedizioneGratuita() }} € per la spedizione gratuita</span>
+    }
+  </p>
+</div>
+
+<div class="btn-group">
+  <button (click)="aumentaQuantita()">Aumenta quantità</button>
+  <button (click)="diminuisciQuantita()" [disabled]="quantita() <= 0">Diminuisci quantità</button>
+</div>
+

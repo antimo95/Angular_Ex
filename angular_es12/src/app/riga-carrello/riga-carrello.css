@@ -1,0 +1,48 @@
+.riepilogo {
+  max-width: 320px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background-color: #f7f7f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.riepilogo p {
+  margin: 6px 0;
+}
+
+.spedizione-gratuita {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn-group button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3f51b5;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-group button:hover:not(:disabled) {
+  background-color: #303f9f;
+  transform: translateY(-1px);
+}
+
+.btn-group button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-group button:disabled {
+  background-color: #c5c5c5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,14 @@
+<h2 class="riepilogo">{{ riepilogo() }}</h2>
+
+<button type="button" (click)="segnaTutteLette()" [disabled]="nonLette() === 0">
+  Segna tutte lette
+</button>
+
+@for (notifica of notifiche(); track notifica.id) {
+  <p class="notifica" [class.letta]="notifica.letta">
+    {{ notifica.testo }}
+    @if (!notifica.letta) {
+      <button type="button" (click)="segnaLetta(notifica.id)">Segna letta</button>
+    }
+  </p>
+}

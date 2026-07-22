@@ -1,0 +1,7 @@
+<p> {{conteggio()}}</p>
+
+<div class ="btn-group">
+    <button (click)="incrementa()" [disabled]="conteggio()==10"> +1 </button>
+    <button (click)="decrementa()" [disabled]="conteggio()==0"> -1 </button>
+    <button (click)="azzera()" [disabled]="conteggio()==0"> Reset </button>
+</div>
