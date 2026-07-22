@@ -1,0 +1,10 @@
+@for (libro of libri; track libro.titolo) {
+    <article>
+        <h3> {{libro.titolo | uppercase}}</h3>
+        <p> {{libro.prezzo | currency:'EUR'}}</p>
+        <p> {{libro.descrizione | tronca:30}}</p>
+        <p> {{libro.pubblicazione | date:'dd/MM/yyyy'}}</p>
+    </article>
+
+
+}

@@ -1,0 +1,21 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.badge {
+  margin: 0 0.5rem;
+  color: #1976d2;
+  font-size: 0.85rem;
+}
+
+.stato {
+  display: block;
+  color: #555;
+  font-size: 0.9rem;
+}

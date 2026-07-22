@@ -1,0 +1,26 @@
+<h2>Ordini ({{ ordini.length }})</h2>
+
+<button (click)="svuota()">Svuota lista</button>
+
+<ul>
+  @for (ordine of ordini; track ordine.id) {
+    <li>
+      <strong>#{{ ordine.id }} — {{ ordine.cliente }}</strong>
+
+      @if ($first) {
+        <span class="badge">🆕 Più recente</span>
+      }
+
+      <span class="stato">
+        @switch (ordine.stato) {
+          @case ('inAttesa') { In attesa ⏳ }
+          @case ('spedito') { Spedito 🚚 }
+          @case ('consegnato') { Consegnato ✅ }
+          @default { Stato sconosciuto }
+        }
+      </span>
+    </li>
+  } @empty {
+    <li>Nessun ordine presente</li>
+  }
+</ul>
