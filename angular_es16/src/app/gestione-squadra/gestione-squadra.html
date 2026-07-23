@@ -1,0 +1,36 @@
+<section class="gestione-squadra">
+  <p class="riepilogo">{{ riepilogo() }}</p>
+
+  <div class="aggiungi">
+    <input
+      type="text"
+      [(ngModel)]="nuovoNome"
+      placeholder="Nome giocatore"
+      aria-label="Nome giocatore"
+    />
+    <input
+      type="text"
+      [(ngModel)]="nuovoRuolo"
+      placeholder="Ruolo giocatore"
+      aria-label="Ruolo giocatore"
+    />
+    <button type="button" (click)="aggiungi()">Aggiungi</button>
+  </div>
+
+  <ul class="lista">
+    @for (giocatore of giocatori(); track giocatore.id) {
+      <li>
+        <app-carta-giocatore
+          [id]="giocatore.id"
+          [nome]="giocatore.nome"
+          [ruolo]="giocatore.ruolo"
+          [disponibile]="giocatore.disponibile"
+          (rimuovi)="rimuovi($event)"
+          (cambiaStato)="cambiaStato($event)"
+        />
+      </li>
+    } @empty {
+      <li class="vuoto">Nessun giocatore in rosa</li>
+    }
+  </ul>
+</section>

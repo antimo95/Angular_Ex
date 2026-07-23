@@ -6,21 +6,20 @@ import { Component, input, output } from '@angular/core';
   templateUrl: './carta-giocatore.html',
   styleUrl: './carta-giocatore.css',
 })
-export class CartaGiocatore{
-
+export class CartaGiocatore {
   id = input.required<number>();
   nome = input.required<string>();
-  ruolo = input<string>('');
+  ruolo = input.required<string>();
   disponibile = input<boolean>(true);
 
   rimuovi = output<number>();
   cambiaStato = output<number>();
-  
-  onRimuovi(): void {
-    this.rimuovi.emit(this.id());
-  }
 
   onCambiaStato(): void {
     this.cambiaStato.emit(this.id());
+  }
+
+  onRimuovi(): void {
+    this.rimuovi.emit(this.id());
   }
 }

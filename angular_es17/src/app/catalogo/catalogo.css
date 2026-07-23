@@ -1,0 +1,46 @@
+.catalogo {
+  background: var(--colore-superficie);
+  border: 1px solid var(--colore-bordo);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.catalogo h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.prodotto {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--colore-bordo);
+}
+
+.prodotto:last-child {
+  border-bottom: none;
+}
+
+.nome {
+  flex: 1 1 auto;
+}
+
+.prezzo {
+  color: #6b7280;
+  font-variant-numeric: tabular-nums;
+}
+
+.aggiungi {
+  background: var(--colore-primario);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.9rem;
+  transition: background-color 0.15s ease;
+}
+
+.aggiungi:hover {
+  background: var(--colore-primario-hover);
+}

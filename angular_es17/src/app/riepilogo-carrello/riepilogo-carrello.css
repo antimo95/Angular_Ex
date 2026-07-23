@@ -1,0 +1,77 @@
+.riepilogo {
+  background: var(--colore-superficie);
+  border: 1px solid var(--colore-bordo);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.riepilogo h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+}
+
+.riassunto {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.prodotto {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--colore-bordo);
+}
+
+.prodotto:last-child {
+  border-bottom: none;
+}
+
+.nome {
+  flex: 1 1 auto;
+}
+
+.prezzo {
+  color: #6b7280;
+  font-variant-numeric: tabular-nums;
+}
+
+.rimuovi {
+  background: transparent;
+  color: var(--colore-pericolo);
+  border: 1px solid var(--colore-pericolo);
+  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.rimuovi:hover {
+  background: var(--colore-pericolo);
+  color: #fff;
+}
+
+.vuoto {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.svuota {
+  margin-top: 1rem;
+  width: 100%;
+  background: var(--colore-pericolo);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: background-color 0.15s ease;
+}
+
+.svuota:hover:not(:disabled) {
+  background: var(--colore-pericolo-hover);
+}
+
+.svuota:disabled {
+  background: var(--colore-bordo);
+  color: #9ca3af;
+}

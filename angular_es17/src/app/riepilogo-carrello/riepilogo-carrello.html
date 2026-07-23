@@ -1,0 +1,18 @@
+<section class="riepilogo">
+  <h2>Carrello</h2>
+  <p class="riassunto">{{ carrello.riepilogo() }}</p>
+
+  @for (articolo of carrello.articoli(); track articolo.id) {
+    <div class="prodotto">
+      <span class="nome">{{ articolo.nome }}</span>
+      <span class="prezzo">{{ articolo.prezzo }} €</span>
+      <button class="rimuovi" (click)="carrello.rimuovi(articolo.id)">Rimuovi</button>
+    </div>
+  } @empty {
+    <p class="vuoto">Carrello vuoto</p>
+  }
+
+  <button class="svuota" (click)="carrello.svuota()" [disabled]="carrello.numeroArticoli() === 0">
+    Svuota
+  </button>
+</section>

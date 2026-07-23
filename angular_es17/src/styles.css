@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  color-scheme: light dark;
+  --colore-primario: #4f46e5;
+  --colore-primario-hover: #4338ca;
+  --colore-pericolo: #dc2626;
+  --colore-pericolo-hover: #b91c1c;
+  --colore-testo: #1f2937;
+  --colore-sfondo: #f3f4f6;
+  --colore-superficie: #ffffff;
+  --colore-bordo: #e5e7eb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--colore-testo);
+  background-color: var(--colore-sfondo);
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}

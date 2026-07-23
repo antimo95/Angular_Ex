@@ -14,10 +14,10 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render the team management component', async () => {
+  it('should render title', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-gestione-squadra')).toBeTruthy();
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular_es17');
   });
 });

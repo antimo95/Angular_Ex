@@ -1,0 +1,11 @@
+<section class="catalogo">
+  <h2>Catalogo</h2>
+
+  @for (articolo of listaArticoli; track articolo.nome) {
+    <div class="prodotto">
+      <span class="nome">{{ articolo.nome }}</span>
+      <span class="prezzo">{{ articolo.prezzo }} €</span>
+      <button class="aggiungi" (click)="carrello.aggiungi(articolo.nome, articolo.prezzo)">Aggiungi</button>
+    </div>
+  }
+</section>

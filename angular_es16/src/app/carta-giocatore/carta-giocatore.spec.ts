@@ -13,6 +13,9 @@ describe('CartaGiocatore', () => {
 
     fixture = TestBed.createComponent(CartaGiocatore);
     component = fixture.componentInstance;
+    fixture.componentRef.setInput('id', 1);
+    fixture.componentRef.setInput('nome', 'Antimo');
+    fixture.componentRef.setInput('ruolo', 'Attaccante');
     await fixture.whenStable();
   });
 
