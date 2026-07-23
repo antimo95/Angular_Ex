@@ -1,0 +1,9 @@
+<div class="carta" [class.non-disponibile]="!disponibile()">   
+    {{nome()}}
+    {{ruolo()}}
+    {{disponibile() ? 'Disponibile' : 'Non disponibile'}}
+    
+</div>
+
+<button (click)="onCambiaStato()">Cambia stato</button>
+<button (click)="onRimuovi()">Rimuovi</button>
